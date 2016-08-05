@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html layout:decorator="layout" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+   <body role="document">
+  	<div class="container">   
+    <section layout:fragment="content">
+        <h1>Welcome!</h1>
+
+        <p>Click <a th:href="@{/remotehello}">here</a> to see a greeting.</p>
+    </section>
+    </div>
+   </body>
+</html>

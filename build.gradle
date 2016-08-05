@@ -1,0 +1,35 @@
+/*
+ *Created by 'lijo' at '2/8/16 3:23 PM' with Gradle 2.14
+ */
+ 
+ buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.0.RELEASE")
+    }
+}
+
+// Apply the java plugin to add support for Java
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+
+
+jar {
+    baseName = 'remote-application'
+    version =  '0.1.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+// In this section you declare the dependencies for your production and test code
+dependencies {
+    // The production code uses the SLF4J logging API at compile time
+    compile 'org.slf4j:slf4j-api:1.7.21'
+    compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+    compile("org.springframework.boot:spring-boot-starter-security")
+    // testCompile 'junit:junit:4.12'
+}
